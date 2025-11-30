@@ -1,12 +1,12 @@
 
-import { ArrowRight, Shield, Building, Wrench, Heart } from "lucide-react";
+import { ArrowRight, Sun, ThermometerSun, Zap, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CallToAction = () => {
-  const scrollToPropertyForm = () => {
-    const element = document.getElementById('property-inquiry-form');
+  const scrollToUpgrades = () => {
+    const element = document.getElementById('upgrades');
     if (element) {
-      const headerOffset = 100; // Adjust this value based on your navbar height plus some padding
+      const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       
@@ -15,7 +15,6 @@ const CallToAction = () => {
         behavior: 'smooth'
       });
     } else {
-      // Fallback to scrolling to the top where the form is located
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -34,33 +33,33 @@ const CallToAction = () => {
             
             <div className="relative z-10 p-8 md:p-10">
               <div className="text-center mb-6">
-                <h2 className="text-3xl md:text-4xl font-bold theme-primary-text mb-4">Ready to Maximize Your Rental Income?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold theme-primary-text mb-4">Ready to Reduce Your Energy Bills?</h2>
                 <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-                  Join thousands of satisfied landlords who have transformed their rental experience.
+                  Join thousands of homeowners making their homes more energy efficient and sustainable.
                 </p>
                 <div className="section-divider mx-auto mt-6"></div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                 <BenefitCard 
-                  icon={Shield}
-                  title="Financial Security"
-                  description="100% rent guarantee with zero default risk"
+                  icon={Sun}
+                  title="Solar Power"
+                  description="Generate clean energy from your roof"
                 />
                 <BenefitCard 
-                  icon={Building}
-                  title="Property Value"
-                  description="Regular maintenance and annual refreshing"
+                  icon={ThermometerSun}
+                  title="Efficient Heating"
+                  description="Heat pumps for lower running costs"
                 />
                 <BenefitCard 
-                  icon={Wrench}
-                  title="Professional Management"
-                  description="Premium tenant screening and property care"
+                  icon={Zap}
+                  title="Better Insulation"
+                  description="Keep warmth in and bills down"
                 />
                 <BenefitCard 
-                  icon={Heart}
-                  title="Peace of Mind"
-                  description="Zero involvement with 24/7 emergency support"
+                  icon={Leaf}
+                  title="Green Living"
+                  description="Reduce your carbon footprint"
                 />
               </div>
               
@@ -68,12 +67,12 @@ const CallToAction = () => {
                 <Button 
                   className="animate-primary-pulse px-8 py-6 text-lg font-medium group"
                   variant="accent"
-                  onClick={scrollToPropertyForm}
+                  onClick={scrollToUpgrades}
                 >
-                  List Your Property Today
+                  Compare Eco Upgrades
                   <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <p className="mt-4 text-sm text-foreground/60">No obligations. <span className="theme-accent-text font-medium">Free property evaluation.</span></p>
+                <p className="mt-4 text-sm text-foreground/60">No obligations. <span className="theme-accent-text font-medium">Free quotes from trusted installers.</span></p>
               </div>
             </div>
           </div>

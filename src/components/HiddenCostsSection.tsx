@@ -1,13 +1,13 @@
 
 import React from "react";
-import { IndianRupee, Users, Home, MessageSquare, AlertTriangle } from "lucide-react";
+import { TrendingUp, Thermometer, Leaf, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 
 const HiddenCostsSection = () => {
-  const scrollToPropertyForm = () => {
-    const element = document.getElementById('property-inquiry-form');
+  const scrollToUpgrades = () => {
+    const element = document.getElementById('upgrades');
     if (element) {
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
@@ -25,21 +25,21 @@ const HiddenCostsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center theme-primary-text">
-            The Hidden Costs of Traditional Property Management
+            The Hidden Costs of Energy Inefficiency
           </h2>
           
           <div className="accent-line mx-auto"></div>
           <p className="mt-4 text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Every month without a tenant costs you more than just lost rent. Traditional property management leaves you vulnerable to:
+            Every month without eco-upgrades costs you more than just higher bills. Inefficient homes are costing UK homeowners:
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {/* Pain Point 1 */}
-          <HiddenCostCard
-            icon={IndianRupee}
-            title="Income Uncertainty"
-            description="Disrupts financial planning with irregular income. Properties average 43 vacant days yearly, creating budget gaps when you need consistent income most."
+          {/* Cost Point 1 */}
+          <CostCard
+            icon={TrendingUp}
+            title="Rising Energy Bills"
+            description="UK energy prices have risen over 50% in recent years. Without efficiency upgrades, you're paying more each year for the same comfort level."
             iconColor="theme-accent-text"
             bgColor="bg-accent-light"
             borderColor="border-gray-200"
@@ -47,11 +47,11 @@ const HiddenCostsSection = () => {
             glowColor="shadow-accent-glow"
           />
           
-          {/* Pain Point 2 */}
-          <HiddenCostCard
-            icon={Users}
-            title="Tenant Disputes"
-            description="Consumes 5-7 hours monthly handling complaints, payments, and maintenance. What should be passive income becomes an unpaid part-time job."
+          {/* Cost Point 2 */}
+          <CostCard
+            icon={Thermometer}
+            title="Heat Loss"
+            description="Up to 35% of heat escapes through walls and 25% through the roof in uninsulated homes. You're literally paying to heat the outside air."
             iconColor="theme-accent-text"
             bgColor="bg-accent-light"
             borderColor="border-gray-200"
@@ -59,11 +59,11 @@ const HiddenCostsSection = () => {
             glowColor="shadow-accent-glow"
           />
           
-          {/* Pain Point 3 */}
-          <HiddenCostCard
-            icon={Home}
-            title="Property Damage"
-            description="Unexpected repairs can cost up to 15-20% of annual rent. Without oversight, minor issues become expensive problems that reduce property value."
+          {/* Cost Point 3 */}
+          <CostCard
+            icon={Leaf}
+            title="Carbon Footprint"
+            description="Homes account for 14% of UK emissions. Inefficient heating and poor insulation increase your environmental impact unnecessarily."
             iconColor="theme-accent-text"
             bgColor="bg-accent-light"
             borderColor="border-gray-200"
@@ -76,11 +76,11 @@ const HiddenCostsSection = () => {
           <Button 
             variant="accent"
             size="lg"
-            onClick={scrollToPropertyForm}
+            onClick={scrollToUpgrades}
             className="text-base"
           >
-            Secure your rental income
-            <MessageSquare size={18} className="ml-2" />
+            Explore Eco Upgrades
+            <Leaf size={18} className="ml-2" />
           </Button>
         </div>
       </div>
@@ -88,7 +88,7 @@ const HiddenCostsSection = () => {
   );
 };
 
-const HiddenCostCard = ({
+const CostCard = ({
   icon: Icon,
   title,
   description,
@@ -129,7 +129,7 @@ const HiddenCostCard = ({
       
       {/* Risk indicator - Updated positioning with consistent padding */}
       <div className="text-center pt-4 pb-2 mt-4 border-t border-gray-100">
-        <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">High Risk Factor</span>
+        <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">Avoidable Cost</span>
       </div>
     </Card>
   );

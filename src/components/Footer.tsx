@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin, Shield, RefreshCw } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Shield, RefreshCw, Leaf } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -32,16 +32,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center text-2xl font-bold theme-primary-text gap-1">
-              <img 
-                src="/lovable-uploads/7b314dd5-c766-4046-8e2f-02a35e9e67c2.png" 
-                alt="Propico Logo" 
-                className="h-8 w-12"
-              />
-              Propico
+            <Link to="/" className="flex items-center text-2xl font-bold theme-primary-text gap-2">
+              <Leaf className="h-8 w-8 text-[var(--theme-primary)]" />
+              Green Homes Compare
             </Link>
             <p className="text-foreground/70 max-w-xs">
-              Transforming the rental experience for property owners across India.
+              Compare the best eco-home upgrades and save money on bills. Your trusted source for sustainable home improvements.
             </p>
             <div className="flex space-x-4">
               {socialIcons.map((item) => (
@@ -62,9 +58,9 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <FooterLink href="#guarantee" onClick={() => scrollToSection('triple-guarantee')}>Our Guarantee</FooterLink>
+              <FooterLink href="#upgrades" onClick={() => scrollToSection('upgrades')}>Eco Upgrades</FooterLink>
               <FooterLink href="#how-it-works" onClick={() => scrollToSection('how-it-works')}>How It Works</FooterLink>
-              <FooterLink href="#packages" onClick={() => scrollToSection('packages')}>Pricing</FooterLink>
+              <FooterLink href="#savings" onClick={() => scrollToSection('savings')}>Savings Calculator</FooterLink>
               <FooterLink href="#faq" onClick={() => scrollToSection('faq')}>FAQ</FooterLink>
               <li>
                 <Link 
@@ -90,7 +86,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-foreground/70">
           <div className="mb-4 md:mb-0">
-            © {currentYear} Propico. All rights reserved.
+            © {currentYear} Green Homes Compare. All rights reserved.
           </div>
           
           <div className="flex flex-wrap justify-center gap-6">
