@@ -1,23 +1,23 @@
-import { ShieldCheck, Wrench, DollarSign, Building, FileCheck } from "lucide-react";
+import { ShieldCheck, Sun, ThermometerSun, Zap, Leaf } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const GuaranteeSection = () => {
   return (
-    <section id="triple-guarantee" className="py-16 theme-gradient">
+    <section id="upgrades" className="py-16 theme-gradient">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 theme-primary-text">Our Four-Part Guarantee Program</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 theme-primary-text">Popular Eco-Home Upgrades</h2>
           <div className="accent-line mx-auto"></div>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            We eliminate all the risks of being a landlord with our comprehensive guarantees.
+            Discover the most effective ways to reduce your energy bills and carbon footprint.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          <GuaranteeCard
-            icon={DollarSign}
-            title="Financial Protection"
-            description="Receive your full rental payment on time, every month. Your rental income is guaranteed against property vacancy and tenant defaults, protecting your investment against financial loss."
+          <UpgradeCard
+            icon={Sun}
+            title="Solar Panels"
+            description="Generate your own clean electricity from sunlight. Typical savings of £300-£500 per year with potential to earn from excess energy sold back to the grid."
             iconColor="theme-primary-text"
             bgColor="bg-primary-light"
             borderColor="border-primary-light"
@@ -25,10 +25,10 @@ const GuaranteeSection = () => {
             glowColor="shadow-primary-glow"
           />
           
-          <GuaranteeCard
-            icon={Wrench}
-            title="Maintenance Excellence"
-            description="All maintenance is performed to professional standards with complete transparency, protecting your property's long-term value. You'll never need to deal with middle-of-the-night emergencies."
+          <UpgradeCard
+            icon={ThermometerSun}
+            title="Heat Pumps"
+            description="Extract renewable heat from air or ground. Up to 4x more efficient than traditional boilers, reducing heating bills by 40-60% annually."
             iconColor="theme-primary-text"
             bgColor="bg-primary-light"
             borderColor="border-primary-light"
@@ -36,10 +36,10 @@ const GuaranteeSection = () => {
             glowColor="shadow-primary-glow"
           />
           
-          <GuaranteeCard
-            icon={Building}
-            title="Property Condition"
-            description="Your property will be returned to you in its original condition, accounting for normal wear and tear, or we cover the cost of restoration. Our meticulous care ensures your property remains well maintained."
+          <UpgradeCard
+            icon={Zap}
+            title="Home Insulation"
+            description="Keep warmth in and cold out with proper insulation. Loft, wall, and floor insulation can reduce heat loss by up to 45%, cutting bills significantly."
             iconColor="theme-primary-text"
             bgColor="bg-primary-light"
             borderColor="border-primary-light" 
@@ -47,10 +47,10 @@ const GuaranteeSection = () => {
             glowColor="shadow-primary-glow"
           />
 
-          <GuaranteeCard
-            icon={FileCheck}
-            title="Tenant Quality"
-            description="We are so confident that if a tenant we place causes damage or defaults, We bear the financial responsibility. Rest easy knowing we will find someone who will love your home as much as you do."
+          <UpgradeCard
+            icon={Leaf}
+            title="Smart Controls"
+            description="Intelligent thermostats and energy monitors help optimise usage. See real-time consumption and automate heating schedules to maximise savings."
             iconColor="theme-primary-text"
             bgColor="bg-primary-light"
             borderColor="border-primary-light" 
@@ -63,7 +63,7 @@ const GuaranteeSection = () => {
   );
 };
 
-const GuaranteeCard = ({
+const UpgradeCard = ({
   icon: Icon,
   title,
   description,
@@ -103,9 +103,9 @@ const GuaranteeCard = ({
       </div>
       <p className="text-gray-700 text-center relative z-10">{description}</p>
       
-      {/* 100% Guarantee indicator */}
+      {/* Savings indicator */}
       <div className="mt-5 text-center">
-        <span className={`text-xs font-semibold uppercase tracking-wider theme-primary-text`}>100% Guaranteed</span>
+        <span className={`text-xs font-semibold uppercase tracking-wider theme-primary-text`}>Save on Bills</span>
       </div>
     </div>
   );
